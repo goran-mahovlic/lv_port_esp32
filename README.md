@@ -23,9 +23,6 @@ Example demo for TFT displays:
 
 ![Example GUI_DEMO with ESP32 using LVGL](images/new_photo.jpg)
 
-Monochrome support:
-
-![Example_monochrome demo with ESP32 using LVGL](images/new_mono.jpg)
 
 ## Display and touch controllers
 
@@ -45,7 +42,7 @@ Instructions assume you are using the v4.x toolchain, otherwise use the make com
 
 ### Build and run the demo.
 
-1. Clone this project by `git clone --recurse-submodules https://github.com/lvgl/lv_port_esp32.git`, this will pull this repo and its submodules.
+1. Clone this project by `git clone --recurse-submodules https://github.com/martinberlin/lv_port_esp32-epaper`, this will pull this repo and its submodules.
 
 2. Get into the created `lv_port_esp32` directory.
 

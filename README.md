@@ -1,11 +1,16 @@
 # LVGL project for ESP32
 
-This is an ESP32 demo project showcasing LVGL v7 with support for several display controllers and touch controllers.
+This is an ESP32 fork project showcasing LVGL v7 with support for several display controllers and touch controllers. The intention is to use the set_px_cb callback to make LVGL work with different epapers that we already support in [CalEPD component](https://github.com/martinberlin/CalEPD).
+CalEPD is an ESP-IDF component that supports many different epapers (SPI & Paralell using [EPDiy](https://github.com/vroland/epdiy) as a bridge component)
+The development repository where everything is tested before landing in their own component repositories is [Cale-idf](https://github.com/martinberlin/Cale-idf).
 The demo application is the `lv_demo_widgets` project from the [lv_examples](https://github.com/lvgl/lv_examples) repository.
 
 - Version of ESP-IDF required 4.2. NOTE: We're trying to make this repo backwards compatible, usage of idf.py is encouraged.
 - Version of LVGL used: 7.9.
 - Version of lv_examples used: 7.9.
+
+The main idea is to use CalEPD as a component and the set_px_cb callback to draw each pixel. This will have a performance hit but it will also allow us to draw UX interfaces in different epapers, like complex 4 SPI combined displays, that are the moment are very difficult to support with LVGL as is. The plan also includes adding the epaper folder in the lvgl_esp32_drivers linked component to separate it from TFT. 
+Touch comes later and it will be better to adapt new I2C Touch drivers directly in the lvgl_esp32_drivers repository, that needs to be forked as well to add the epaper drivers.
 
 #### Table of content
 - [Get started](#get-started)

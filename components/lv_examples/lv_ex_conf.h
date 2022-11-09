@@ -46,6 +46,13 @@
 #endif
 #endif
 
+/*Show EEZ studio demo*/
+#ifdef CONFIG_LV_USE_DEMO_EEZ
+#define LV_USE_DEMO_EEZ        1
+#else
+#define LV_USE_DEMO_EEZ        0
+#endif
+
 /*Printer demo, optimized for 800x480*/
 #define LV_USE_DEMO_PRINTER     0
 
@@ -65,13 +72,12 @@
 
 /*Stress test for LVGL*/
 #ifdef CONFIG_LV_USE_DEMO_STRESS
-#define LV_USE_DEMO_STRESS  1 
+#define LV_USE_DEMO_STRESS  1
 #else
-#define LV_USE_DEMO_STRESS  0 
+#define LV_USE_DEMO_STRESS  0
 
 #endif
 
 #endif /*LV_EX_CONF_H*/
 
 #endif /*End of "Content enable"*/
-
